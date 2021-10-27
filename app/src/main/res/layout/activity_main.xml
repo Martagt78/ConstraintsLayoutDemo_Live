@@ -22,25 +22,24 @@
         android:id="@+id/imageViewPoster"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        android:contentDescription="@null"
-        android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
+        android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewHeader"
         app:layout_constraintDimensionRatio="w,2:3"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/imageViewHeader"
         app:srcCompat="@drawable/poster" />
 
     <TextView
         android:id="@+id/textViewMovieHeading"
         android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:text="@string/beauty_and_the_beast"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
         app:layout_constraintStart_toEndOf="@+id/imageViewPoster"
         app:layout_constraintTop_toBottomOf="@+id/imageViewHeader"
         tools:text="Beauty and the Beast" />
@@ -49,11 +48,37 @@
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/imageViewHeader"
         app:srcCompat="@drawable/ic_bookmark"
-        tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck,VectorDrawableCompat" />
+        tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck,VectorDrawableCompat,TouchTargetSizeCheck"
+        android:contentDescription="TODO" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="PG13 | Comedy | 113 min "
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPoster"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMovieHeading" />
 </androidx.constraintlayout.widget.ConstraintLayout>

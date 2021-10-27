@@ -34,9 +34,9 @@
         android:id="@+id/textViewMovieHeading"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/beauty_and_the_beast"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
@@ -51,11 +51,11 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="?attr/selectableItemBackground"
+        android:contentDescription="TODO"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/imageViewHeader"
         app:srcCompat="@drawable/ic_bookmark"
-        tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck,VectorDrawableCompat,TouchTargetSizeCheck"
-        android:contentDescription="TODO" />
+        tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck,VectorDrawableCompat,TouchTargetSizeCheck" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -73,12 +73,54 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="PG13 | Comedy | 113 min "
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toEndOf="@+id/imageViewPoster"
         app:layout_constraintTop_toBottomOf="@+id/textViewMovieHeading" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/Barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="imageViewPoster, textView"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="RENT FROM R29.99"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/Barrier"
+        tools:text="RENT FROM R29.99" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="BUY FROM R129.99"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/Barrier"
+        tools:text="BUY FROM R129.99" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

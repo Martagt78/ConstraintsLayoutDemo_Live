@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_family.xml" value="0.1527777777777778" />
+        <entry key="app/src/main/res/drawable-v24/ic_similar.xml" value="0.1527777777777778" />
         <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/bias_vs_match_constraint.xml" value="0.25" />
